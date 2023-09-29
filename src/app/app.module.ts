@@ -8,6 +8,7 @@ import { CategoryListComponent } from './category/category-list/category-list.co
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
