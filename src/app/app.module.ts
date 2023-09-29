@@ -7,6 +7,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { HomeComponent } from './home/home.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     CategoryListComponent,
     ProductListComponent,
-    HomeComponent
+    HomeComponent,
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,
