@@ -18,4 +18,8 @@ export class ProductService {
   findById(id: number) {
     return this.http.get<IProduct>('https://fakestoreapi.com/products/' + id);
   }
+
+  register(product: IProduct) {
+    return this.http.post<IProduct>('https://fakestoreapi.com/products', product);
+  }
 }

@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductDetailComponent } from './product/product-detail/product-detail.
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

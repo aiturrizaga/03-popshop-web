@@ -1,1 +1,26 @@
-<p>admin-home works!</p>
+<div class="container">
+    <h3>Nuevo producto</h3>
+    <form [formGroup]="productForm" (ngSubmit)="registerProduct()">
+        <div class="form-floating mb-3">
+            <input type="text" formControlName="title" class="form-control" id="textTitle" placeholder="Titulo del producto">
+            <label for="textTitle">Titulo</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="number" formControlName="price" class="form-control" id="txtPrecio" placeholder="Precio del producto">
+            <label for="txtPrecio">Precio</label>
+        </div>
+        <div class="form-floating mb-3">
+            <textarea class="form-control" formControlName="description" placeholder="Descripción del producto" id="txtDescription" style="height: 100px"></textarea>
+            <label for="txtDescription">Descripción</label>
+          </div>
+        <div class="form-floating mb-3">
+            <input type="text" formControlName="category" class="form-control" id="txtCategoria" placeholder="Categoria del producto">
+            <label for="txtCategoria">Categoria</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" formControlName="image" class="form-control" id="txtImagen" placeholder="Imagen del producto">
+            <label for="txtImagen">Imagen</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Agregar producto</button>
+    </form>
+</div>
