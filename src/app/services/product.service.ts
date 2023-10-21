@@ -6,9 +6,16 @@ import { IProduct } from '../interfaces/product.interface';
   providedIn: 'root',
 })
 export class ProductService {
+
+  productSelected: IProduct = {};
+
   constructor(private http: HttpClient) {}
 
   findAll() {
     return this.http.get<IProduct[]>('https://fakestoreapi.com/products');
+  }
+
+  findById(id: number) {
+    return this.http.get<IProduct>('https://fakestoreapi.com/products/' + id);
   }
 }

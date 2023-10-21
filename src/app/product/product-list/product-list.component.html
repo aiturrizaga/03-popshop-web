@@ -1,9 +1,9 @@
 <div class="row row-cols-1 row-cols-md-5 g-4">
     <div class="col" *ngFor="let product of products">
         <div class="card h-100">
-            <img [src]="product.image" class="card-img-top" [alt]="product.title">
+            <img (click)="navigateToProductDetail(product)" [src]="product.image" class="card-img-top cursor-pointer" [alt]="product.title">
             <div class="card-body">
-                <h5 class="card-title">{{product.title}}</h5>
+                <h5 class="card-title cursor-pointer" (click)="navigateToProductDetail(product)">{{product.title}}</h5>
                 <p class="card-text">{{product.description}}</p>
             </div>
             <div class="card-footer">

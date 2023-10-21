@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { IProduct } from 'src/app/interfaces/product.interface';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -8,10 +9,9 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-list.component.css'],
 })
 export class ProductListComponent implements OnInit {
-
   products: IProduct[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     console.log('Se inicio la lista de productos');
@@ -19,9 +19,14 @@ export class ProductListComponent implements OnInit {
   }
 
   getProducts() {
-    this.productService.findAll().subscribe(res => {
+    this.productService.findAll().subscribe((res) => {
       console.log(res);
       this.products = res;
     });
+  }
+
+  navigateToProductDetail(product: IProduct) {
+    this.productService.productSelected = product;
+    this.router.navigate(['products', product.id]).then();
   }
 }
